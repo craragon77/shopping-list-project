@@ -1,8 +1,11 @@
-//function that makes the item that is typed into the form, makes the thing
-$("js-shopping-list-form").on('click', 'li', function(){
-    event.preventDefaultBehaivor;
-    this.append("<li>")
+//function to add the item to the list
+$(function() {
+$("#js-shopping-list-form").on('click', 'li', function(event){
+    event.preventDefaultBehavior();
+    $("shopping-list").append("<li>")
 });
+
+
 
 
 
@@ -11,4 +14,18 @@ $("js-shopping-list-form").on('click', 'li', function(){
 
 
 
-//
+const list = $(".shopping-list")
+    $(".shopping-item-toggle").click(function(event) {
+        event.currentTarget();
+    list.find(".shopping-item").toggle("shopping-item__checked");
+});
+
+
+
+//function that deletes the item
+$("shopping-list-delete").click(function(event) {
+    event.stopPropagation();
+    list.find(".shopping-item").remote()
+})
+
+});
