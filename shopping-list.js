@@ -1,12 +1,10 @@
 //function to add the item to the list
- function shoppingListProject() {
+
 
 $("#js-shopping-list-form").find("button").click(function(event) {
     event.preventDefault();
-    $(".shopping-list").append(
-        $(li).text(this.find("input"))
-    );
-});
+    $(".shopping-list").append("<li>",$("#shopping-list-entry"))
+})
     
     
     
@@ -29,7 +27,7 @@ $("shopping-list-delete").click(function(event) {
     list.find(".shopping-item, li").remote();
 }) */
     
-}
+
 
 
 
