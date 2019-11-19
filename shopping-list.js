@@ -1,11 +1,12 @@
 //function to add the item to the list
-function list() {
+ function shoppingListProject() {
 
-const buttonClass = $(".js-shopping-list-form");
-buttonClass.find("button").click(function(event) {
+$("#js-shopping-list-form").find("button").click(function(event) {
     event.preventDefault();
-    $(".shopping-item").append().text();
-    });
+    $(".shopping-list").append(
+        $(li).text(this.find("input"))
+    );
+});
     
     
     
@@ -16,16 +17,19 @@ buttonClass.find("button").click(function(event) {
     
     
     
-const list = $(".shopping-list");
+/* const list = $(".shopping-list");
     $(".shopping-item-toggle").click(function(event) {
-    this.addClass(shopping-item__checked);
+    $(event.currentTarget).addClass(".shopping-item__checked");
     });
     
     
     //function that deletes the item
 $("shopping-list-delete").click(function(event) {
     event.stopPropagation();
-    list.find(".shopping-item").remote();
-})
+    list.find(".shopping-item, li").remote();
+}) */
     
 }
+
+
+
