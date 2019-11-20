@@ -19,22 +19,15 @@ $("#js-shopping-list-form").find("button").click(function(event) {
 
 //function that makes the thing disappear when the dissapear button is clicked
     
-$(".shopping-item-toggle").click(function(event){
+$("ul").on('click', ".shopping-item-toggle", function(event){
     $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked")
  })
 
 
     //function that deletes the item
-$(".shopping-item-delete").click(function(event){
+$("ul").on('click', ".shopping-item-delete", function(event){
         $(this).closest("li").remove();
 })
-
-
-
-/* $("shopping-list-delete").click(function(event) {
-    event.stopPropagation();
-    list.find(".shopping-item, li").remote();
-}) */
 
 
     
