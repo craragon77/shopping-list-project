@@ -1,6 +1,5 @@
 //function to add the item to the list
 
-
 $("#js-shopping-list-form").find("button").click(function(event) {
     event.preventDefault();
     $(".shopping-list").append(
@@ -17,27 +16,30 @@ $("#js-shopping-list-form").find("button").click(function(event) {
       </li>`
     )
 })
-    
-    
-    
-    
-    
-    
+
 //function that makes the thing disappear when the dissapear button is clicked
     
-    
-    
-/* const list = $(".shopping-list");
-    $(".shopping-item-toggle").click(function(event) {
-    $(event.currentTarget).addClass(".shopping-item__checked");
-    });
-    
-    
+$(".shopping-item-toggle").click(function(event){
+    $(this).parent(
+        $(".shopping-item").toggleClass("shopping-item__checked") )
+ })
+
+
     //function that deletes the item
-$("shopping-list-delete").click(function(event) {
+$(".shopping-item-delete").click(function(event){
+        $(this).parent(
+            ("li").remove()
+        )
+})
+
+
+
+/* $("shopping-list-delete").click(function(event) {
     event.stopPropagation();
     list.find(".shopping-item, li").remote();
 }) */
+
+
     
 
 
