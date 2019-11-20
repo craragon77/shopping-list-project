@@ -20,16 +20,13 @@ $("#js-shopping-list-form").find("button").click(function(event) {
 //function that makes the thing disappear when the dissapear button is clicked
     
 $(".shopping-item-toggle").click(function(event){
-    $(this).parent(
-        $(".shopping-item").toggleClass("shopping-item__checked") )
+    $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked")
  })
 
 
     //function that deletes the item
 $(".shopping-item-delete").click(function(event){
-        $(this).parent(
-            ("li").remove()
-        )
+        $(this).closest("li").remove();
 })
 
 
